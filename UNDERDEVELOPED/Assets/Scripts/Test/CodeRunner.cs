@@ -60,7 +60,7 @@ public class CodeRunner : MonoBehaviour
             console.GetComponent<TextMeshProUGUI>().text = errorMsg;
             return;
         }
-
+        Debug.Log("Reached the ass");
         console.GetComponent<TextMeshProUGUI>().text = output;
     }
 

@@ -26,5 +26,6 @@ public class Controls : MonoBehaviour
     {
         editor.SetActive(false);
         console.SetActive(true);
+        console.transform.GetChild(0).gameObject.SetActive(true);
     }
 }
