@@ -6,7 +6,7 @@ using System.IO;
 using System.Text;
 using UnityEngine;
 
-public static class Mono
+public static class MonoCommands
 {
     public static ArrayList consoleCompileError, consoleRuntimeError;
     public static void ExecuteCommand(string command)

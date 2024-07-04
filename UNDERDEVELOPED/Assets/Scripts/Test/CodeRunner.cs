@@ -13,7 +13,7 @@ public class CodeRunner : MonoBehaviour
     void Start()
     {
         path = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments), "My Games/Underdeveloped/ExeFile");
-        Mono.createDir(path);
+        MonoCommands.createDir(path);
         btnEditor_Click();
     }
 
@@ -34,13 +34,13 @@ public class CodeRunner : MonoBehaviour
             txt = editor.GetComponent<TMP_InputField>().text;
         }
 
-        Mono.createCS(path, "test", txt);
-        Mono.compileCS("mcs test.cs", path);
+        MonoCommands.createCS(path, "test", txt);
+        MonoCommands.compileCS("mcs test.cs", path);
 
-        if(Mono.haveCompilationError())
+        if(MonoCommands.haveCompilationError())
         {
             string errorMsg = "";
-            foreach (string str in Mono.consoleCompileError)
+            foreach (string str in MonoCommands.consoleCompileError)
             {
                 errorMsg += str;
             }
@@ -48,12 +48,12 @@ public class CodeRunner : MonoBehaviour
             return;
         }
 
-        string output = Mono.runExeFile("mono test.exe", path);
+        string output = MonoCommands.runExeFile("mono test.exe", path);
 
-        if (Mono.haveRuntimeError())
+        if (MonoCommands.haveRuntimeError())
         {
             string errorMsg = "";
-            foreach (string str in Mono.consoleRuntimeError)
+            foreach (string str in MonoCommands.consoleRuntimeError)
             {
                 errorMsg += str;
             }
