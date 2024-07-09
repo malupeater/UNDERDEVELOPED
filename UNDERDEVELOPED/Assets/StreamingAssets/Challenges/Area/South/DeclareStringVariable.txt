@@ -1,0 +1,12 @@
+using System;
+
+public class PlayerCode
+{
+	//function name
+	
+	public static void Main(string[] args)
+	{
+		PlayerCode playerCode = new PlayerCode();
+		playerCode.DeclareStringVariable();
+	}
+}

@@ -1,0 +1,35 @@
+using System;
+
+public class PlayerCodeTest
+{
+	private int numberOfFailedTest;
+
+	//player function
+	
+	public static void Main(string[] args)
+	{
+		numberOfFailedTest = 0;
+
+		PlayerCodeTest playerCodeTest = new PlayerCodeTest();
+		playerCodeTest.DeclareStringVariable();
+	}
+	
+	private void PlayerCodeTest_DeclareStringVariable_VariableShouldBeNull(string variable)
+	{
+		try
+		{
+			if(variable == null)
+			{
+				return;
+			}
+
+			numberOfFailedTest++;
+			Console.WriteLine("String variable name should be null");//printout
+		}
+		catch(Exception ex)
+		{
+			string message = "The string variable must be null";//printout
+			Console.WriteLine(ex + message);//printout
+		}	
+	}
+}

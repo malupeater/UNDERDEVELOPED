@@ -1,0 +1,29 @@
+using System;
+
+public class PlayerCodeTest
+{
+	int numOfFailedTest = 0;
+	//player function
+	public static void Main(string[] args)
+	{
+		PlayerCodeTest playerCodeTest = new PlayerCodeTest();
+		playerCodeTest.AddTwoInteger();
+		playerCodeTest.PlayerCodeTest_AddTwoInteger_SumShouldReturn3();
+	}
+
+	public void PlayerCodeTest_AddTwoInteger_ShouldReturn3()
+	{
+		PlayerCodeTest playerCodeTest = new PlayerCodeTest();
+		
+		int num1 = 2, num2 = 1;
+		int sum = num1 + num2;
+		int result = playerCodeTest.AddTwoInteger(2,1);
+
+		if (result != sum)
+		{
+			numOfFailedTest ++;
+			Console.WriteLine($"num1 = 2\nnum2 = 1\nexpected = 3\nresult =  {result}");//printout
+			Environment.Exit(0);
+		}
+	}
+}

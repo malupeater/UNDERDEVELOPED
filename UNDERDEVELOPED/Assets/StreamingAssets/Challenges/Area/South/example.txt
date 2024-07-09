@@ -1,0 +1,4 @@
+public void Example()
+{
+	Console.WriteLine("Example");
+}

@@ -1,0 +1,12 @@
+using System;
+
+public class PlayerCode
+{
+	public static void Main(string[] args)
+	{
+		PlayerCode playerCode = new PlayerCode();
+		//function call
+	}
+
+	//Player Function
+}

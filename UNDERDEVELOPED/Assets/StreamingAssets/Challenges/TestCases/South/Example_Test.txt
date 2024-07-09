@@ -1,0 +1,17 @@
+using System;
+
+public class PlayerCodeTest
+{
+	public static void Main(string[] args)
+	{
+		PlayerCodeTest playerCodeTest = new PlayerCodeTest();
+		//function call
+	}
+	
+	//player function
+
+	public void PlayerCode_PrintOutYourName_DisplayGay()
+	{
+		Console.WriteLine("1");
+	}
+}
